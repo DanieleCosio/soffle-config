@@ -169,18 +169,9 @@
             tapping-term-ms = <120>;
         };
 
-        paste_p: paste_p {
+        paste_v: paste_v {
             compatible = "zmk,behavior-hold-tap";
-            label = "PASTE_P";
-            bindings = <&paste>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
+            label = "PASTE_V";
             bindings = <&paste>, <&kp>;
 
             #binding-cells = <2>;
@@ -297,7 +288,7 @@
         paste: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp P>;
+            bindings = <&kp LEFT_CONTROL &kp V>;
             label = "PASTE";
         };
 
@@ -315,7 +306,7 @@
         default_layer {
             display-name = "QWERTY R";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE TAB  &kp Y        &kp U         &kp I             &kp O     &paste_p 0 P  &mt LEFT_SHIFT BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE TAB  &kp Y        &kp U         &kp I             &kp O     &kp P         &mt LEFT_SHIFT BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER      &kp H        &kp J         &kp K             &kp L     &kp UP_ARROW  &mt LEFT_ALT ESCAPE
 &trans  &trans  &trans  &trans  &trans  &trans                         &kp N        &kp M         &dt_comma_period  &kp LEFT  &kp DOWN      &mt LEFT_GUI RIGHT
                         &trans  &trans  &trans                         &lt 1 SPACE  &lt 2 C_MUTE  &mt LCTRL C_PP
@@ -327,9 +318,9 @@
         lower_layer {
             display-name = "QUERTY L";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP  &kp Q   &kp W       &kp E             &kp R  &kp T  &dmt_shift_hash_amp
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOL_DN        &kp A   &kp S       &kp D             &kp F  &kp G  &dmt_alt_excl_quest
-&trans  &trans  &trans  &trans  &trans  &trans                              &kp Z   &cut_x 0 X  &copy_c 0 C       &kp V  &kp B  &kp LEFT_GUI
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP  &kp Q   &kp W       &kp E             &kp R         &kp T  &dmt_shift_hash_amp
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOL_DN        &kp A   &kp S       &kp D             &kp F         &kp G  &dmt_alt_excl_quest
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp Z   &cut_x 0 X  &copy_c 0 C       &paste_v 0 V  &kp B  &kp LEFT_GUI
                         &trans  &trans  &trans                              &trans  &kp C_PREV  &mt C_NEXT LCTRL
             >;
         };
