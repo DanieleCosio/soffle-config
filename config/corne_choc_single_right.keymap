@@ -116,7 +116,7 @@
             bindings = <&kp>, <&bt_sel_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
         };
 
         ht_mt_bt1: ht_mt_bt1 {
@@ -125,7 +125,7 @@
             bindings = <&kp>, <&bt_sel_1>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
         };
 
         dmt_shift_hash_amp: dmt_shift_hash_amp {
@@ -133,6 +133,8 @@
             label = "DMT_SHIFT_HASH_AMP";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT HASH>, <&kp AMPS>;
+
+            tapping-term-ms = <120>;
         };
 
         dmt_shift_dollar_pct: dmt_shift_dollar_pct {
@@ -142,11 +144,11 @@
             bindings = <&mt LEFT_SHIFT DOLLAR>, <&kp PERCENT>;
         };
 
-        dmt_ctrl_parentheses: dmt_ctrl_parentheses {
+        dmt_cmd_parentheses: dmt_cmd_parentheses {
             compatible = "zmk,behavior-tap-dance";
-            label = "DMT_CTRL_PARENTHESES";
+            label = "DMT_CMD_PARENTHESES";
             #binding-cells = <0>;
-            bindings = <&mt RCTRL LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+            bindings = <&mt LEFT_GUI LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
     };
 
@@ -236,10 +238,10 @@
         default_layer {
             display-name = "QWERTY R";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE TAB           &kp Y        &kp U         &kp I             &kp O     &kp P         &mt LEFT_SHIFT BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LEFT_COMMAND ENTER  &kp H        &kp J         &kp K             &kp L     &kp UP_ARROW  &mt LEFT_ALT ESCAPE
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp N        &kp M         &dt_comma_period  &kp LEFT  &kp DOWN      &mt RCTRL RIGHT
-                        &trans  &trans  &trans                                  &lt 1 SPACE  &lt 2 C_MUTE  &mt LCTRL C_PP
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE TAB  &kp Y        &kp U         &kp I             &kp O     &kp P         &mt LEFT_SHIFT BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER      &kp H        &kp J         &kp K             &kp L     &kp UP_ARROW  &mt LEFT_ALT ESCAPE
+&trans  &trans  &trans  &trans  &trans  &trans                         &kp N        &kp M         &dt_comma_period  &kp LEFT  &kp DOWN      &mt LEFT_GUI RIGHT
+                        &trans  &trans  &trans                         &lt 1 SPACE  &lt 2 C_MUTE  &mt LCTRL C_PP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -248,10 +250,10 @@
         lower_layer {
             display-name = "QUERTY L";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP         &kp Q   &kp W       &kp E             &kp R  &kp T  &dmt_shift_hash_amp
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LEFT_COMMAND C_VOL_DN  &kp A   &kp S       &kp D             &kp F  &kp G  &dmt_alt_excl_quest
-&trans  &trans  &trans  &trans  &trans  &trans                                     &kp Z   &kp X       &kp C             &kp V  &kp B  &dmt_ctrl_parentheses
-                        &trans  &trans  &trans                                     &trans  &kp C_PREV  &mt C_NEXT LCTRL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt GLOBE C_VOL_UP  &kp Q   &kp W       &kp E             &kp R  &kp T  &dmt_shift_hash_amp
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOL_DN        &kp A   &kp S       &kp D             &kp F  &kp G  &dmt_alt_excl_quest
+&trans  &trans  &trans  &trans  &trans  &trans                              &kp Z   &kp X       &kp C             &kp V  &kp B  &dmt_cmd_parentheses
+                        &trans  &trans  &trans                              &trans  &kp C_PREV  &mt C_NEXT LCTRL
             >;
         };
 
@@ -260,7 +262,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &ht_mt_bt0 GLOBE 0         &kp NUMBER_1  &kp NUMBER_2        &kp NUMBER_3        &kp NUMBER_4     &kp NUMBER_0       &dmt_shift_dollar_pct
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &ht_mt_bt1 LEFT_COMMAND 0  &dt_quotes    &dt_asterisk_caret  &dt_lt_gt           &dt_pipe_bslash  &dt_fslash_uscore  &dmt_alt_grave_tilde
-&trans  &trans  &trans  &trans  &trans  &trans                                     &dt_min_plus  &dt_curly_bracket   &dt_square_bracket  &dt_colons       &dt_eq_at          &mt RCTRL X
+&trans  &trans  &trans  &trans  &trans  &trans                                     &dt_min_plus  &dt_curly_bracket   &dt_square_bracket  &dt_colons       &dt_eq_at          &mt LEFT_GUI X
                         &trans  &trans  &trans                                     &bt BT_CLR    &trans              &rgb_ug RGB_TOG
             >;
         };
