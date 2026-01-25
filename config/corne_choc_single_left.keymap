@@ -313,10 +313,10 @@
         default_layer {
             display-name = "QWERTY L";
             bindings = <
-&mt LEFT_SHIFT BACKSPACE  &kp P         &kp O      &kp I             &kp U         &kp Y        &mt GLOBE TAB  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_ALT ESCAPE       &kp UP_ARROW  &kp L      &kp K             &kp J         &kp H        &lt 3 ENTER    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_GUI LEFT         &kp DOWN      &kp RIGHT  &dt_comma_period  &kp M         &kp N                               &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &mt LCTRL C_PP    &lt 2 C_MUTE  &lt 1 SPACE                         &trans  &trans  &trans
+&mt LEFT_SHIFT BACKSPACE  &kp Q  &kp W  &kp E           &kp R         &kp T        &mt GLOBE TAB  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_ALT ESCAPE       &kp A  &kp S  &kp D           &kp F         &kp G        &lt 3 ENTER    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_GUI LEFT         &kp Z  &kp X  &kp C           &kp V         &kp B                               &trans  &trans  &trans  &trans  &trans  &trans
+                                        &mt LCTRL C_PP  &lt 2 C_MUTE  &lt 1 SPACE                         &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -325,10 +325,10 @@
         lower_layer {
             display-name = "QUERTY R";
             bindings = <
-&mt LEFT_SHIFT BACKSPACE  &kp T  &kp R  &kp E   &kp W       &kp Q             &mt GLOBE TAB  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_ALT ESCAPE       &kp G  &kp F  &kp D   &kp S       &kp A             &kp ENTER      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mt LEFT_GUI LEFT         &kp B  &kp V  &kp C   &kp X       &kp Z                                    &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans  &kp C_PREV  &mt C_NEXT LCTRL                         &trans  &trans  &trans
+&mt LEFT_SHIFT BACKSPACE &kp P         &kp O      &kp I             &kp U       &kp Y             &mt GLOBE TAB  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_ALT ESCAPE      &kp UP_ARROW  &kp L      &kp K             &kp J       &kp H             &kp ENTER      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_GUI LEFT        &kp DOWN      &kp RIGHT  &dt_comma_period  &kp M       &kp N                                            &trans  &trans  &trans  &trans  &trans  &trans
+                                                  &trans            &kp C_PREV  &mt C_NEXT LCTRL                                 &trans  &trans  &trans
             >;
         };
 
